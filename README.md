@@ -1,12 +1,21 @@
-# Renovate reproduction repo
+# Renovate reproduction repo: not poetry updates for `^1.2.3.0` (caret + four components)
 
-The Poetry manage appears to not upgrade python packages with four components (mostly `types-*` package).
+```toml
+[tool.poetry.dependencies]
+python = "^3.11"
+types-setuptools = "^69.0.0.20240115"
+types-pytz = ">= 2023.3.1.0"
+```
 
-Add add `types-` package to a poetry project:
+Renovate only detects and provides updates for `types-pytz`: both have four components,
+caret contraints do not work, inequality does work.
 
-`poetry add types-X`
+The two DependaBot PRs show that both dependencies are out-of-date.
 
-It will add a contraints like `^1.2.3.0` (usually 1.2.3 is the original upstream version; and 0 is the
-revisition of the typing package).
+Sadly, caret contraints are the default: they are used when just running:
 
-Renovate does not detect this updates. It detects however `>= 1.2.3.0` etc.
+```sh
+poetry add types-X
+```
+
+Upstream discussion: https://github.com/renovatebot/renovate/discussions/26939
