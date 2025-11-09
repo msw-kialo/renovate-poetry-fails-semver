@@ -2,13 +2,13 @@
 
 [[package]]
 name = "types-pytz"
-version = "2023.3.1.0"
+version = "2025.2.0.20251108"
 description = "Typing stubs for pytz"
 optional = false
-python-versions = "*"
+python-versions = ">=3.9"
 files = [
-    {file = "types-pytz-2023.3.1.0.tar.gz", hash = "sha256:8e7d2198cba44a72df7628887c90f68a568e1445f14db64631af50c3cab8c090"},
-    {file = "types_pytz-2023.3.1.0-py3-none-any.whl", hash = "sha256:a660a38ed86d45970603e4f3b4877c7ba947668386a896fb5d9589c17e7b8407"},
+    {file = "types_pytz-2025.2.0.20251108-py3-none-any.whl", hash = "sha256:0f1c9792cab4eb0e46c52f8845c8f77cf1e313cb3d68bf826aa867fe4717d91c"},
+    {file = "types_pytz-2025.2.0.20251108.tar.gz", hash = "sha256:fca87917836ae843f07129567b74c1929f1870610681b4c92cb86a3df5817bdb"},
 ]
 
 [[package]]
